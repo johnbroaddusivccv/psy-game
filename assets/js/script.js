@@ -8,7 +8,8 @@ var userGuess;
 var userGuesses = [];
 var button = document.getElementById("scrabble");
 var confirmPlay = confirm("Welcome to my guessing game!! Shall we?");
-var confirmAnswer = (computerGuess === userGuess);
+
+
 console.log(computerGuess);
 
 function reset() {
@@ -21,17 +22,15 @@ function reset() {
     
 }
 
+
 if (confirmPlay) {
-    alert("Awesome!!")
+    alert("Awesome!!");
 }
 else {
-    alert("Like you ever had a choice?")
+    alert("Like you ever had a choice?");
 }
 
 button.onclick = function() {
     prompt("Guess a letter");
 }
-if (userGuess === confirmAnswer) {
-    prompt("hello");
 
-}
