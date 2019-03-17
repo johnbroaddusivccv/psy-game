@@ -10,6 +10,7 @@ var button = document.getElementById("scrabble");
 var confirmPlay = confirm("Welcome to my guessing game!! Shall we?");
 
 
+
 console.log(computerGuess);
 
 function reset() {
@@ -22,6 +23,23 @@ function reset() {
     
 }
 
+function counter () {
+    if (userGuess === computerGuess){
+        wins++
+    }
+    else if (userGuess !== computerGuess){
+        loses++
+
+    }
+    else if (userGuess === computerGuess && userGuess !== computerGuess) {
+        gLeft--
+     }
+        
+    }
+
+
+
+
 
 if (confirmPlay) {
     alert("Awesome!!");
@@ -30,7 +48,35 @@ else {
     alert("Like you ever had a choice?");
 }
 
-button.onclick = function() {
-    prompt("Guess a letter");
+button.onclick = function() { 
+    var person = prompt("Guess a letter"); 
+if (person == computerGuess) {
+alert("You got it right");
+wins++;
+gLeft--;
+document.getElementById("wins").textContent = wins;
+document.getElementById("gLeft").textContent = gLeft;
 }
+else {
+    alert("Try again!");
+loses++;
+gLeft--;
+    
+    document.getElementById("loses").textContent = loses; 
+    document.getElementById("gLeft").textContent = gLeft;
+    
+}
+}
+
+
+
+
+
+    
+    
+
+
+
+
+
 
